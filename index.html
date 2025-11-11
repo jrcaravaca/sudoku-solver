@@ -1,13 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/sudoku.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sudoku_solver</title>
+    <title>Sudoku Solver</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-gray-300">
+    <div id="app" class="lg:h-screen flex flex-col items-center justify-center gap-4">
+      <h1 class="text-6xl">Sudoku Solver</h1>
+      <div class="sudoku-container">
+        <div id="sudoku-grid" class="grid grid-cols-9 gap-px"></div>
+      </div>
+
+      <button id="solve-btn" class="border border-black rounded p-1 bg-blue-400 text-white cursor-pointer mt-4 text-center">Solve Puzzle</button>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
