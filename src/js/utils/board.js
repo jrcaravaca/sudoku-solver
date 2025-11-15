@@ -5,6 +5,11 @@ export function board(container) {
             cell.maxLength = 1; 
             cell.type = "text"
             cell.classList.add("aspect-square","border", "w-12", "text-center")
+            if (j % 3 === 0) cell.classList.add("border-l-3"); 
+            if (j === 8) cell.classList.add("border-r-3"); 
+            if (i % 3 == 0) cell.classList.add("border-t-3")
+            if (i === 8) cell.classList.add("border-b-3"); 
+            
             cell.addEventListener('keypress',(e) => {
         
                 if (!(parseInt(e.key) <= 9 && parseInt(e.key) > 0)) {

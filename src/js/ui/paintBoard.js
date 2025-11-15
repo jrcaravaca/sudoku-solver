@@ -4,6 +4,7 @@ export function paintBoard(numberArray, cellsArray) {
         for (let j = 0; j < cellsArray[i].length; j++) {
             setTimeout(() => {
                 cellsArray[i][j].value = numberArray[i][j]
+                cellsArray[i][j].classList.add('bg-green-400')
             }, delay);
             delay = delay+100
         }
